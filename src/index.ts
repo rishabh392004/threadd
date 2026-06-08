@@ -10,7 +10,10 @@ const server = new ApolloServer({
       hello: String
       say(name: String!): String
     }
-  `,
+type Mutation{
+createUser
+}
+  `,//schema
   resolvers: {
     Query: {
       hello: () => "Hello world!",
